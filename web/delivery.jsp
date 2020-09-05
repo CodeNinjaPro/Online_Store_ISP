@@ -60,7 +60,7 @@ Coded by www.creative-tim.com
                                 <p>Invoice</p>
                             </a>
                         </li>
-                        <li>
+                        <li   class="active ">
                             <a href="delivery.jsp">
                                 <i class="nc-icon nc-single-02"></i>
                                 <p>Delivery</p>
@@ -78,13 +78,13 @@ Coded by www.creative-tim.com
                                 <p>GRN</p>
                             </a>
                         </li>                        
-                        <li  >
+                        <li>
                             <a href="supplier.jsp">
                                 <i class="nc-icon nc-single-02"></i>
                                 <p>Supplier</p>
                             </a>
                         </li>                        
-                        <li >
+                        <li>
                             <a href="item.jsp">
                                 <i class="nc-icon nc-box"></i>
                                 <p>Item Registration</p>
@@ -96,7 +96,7 @@ Coded by www.creative-tim.com
                                 <p>Stock</p>
                             </a>
                         </li>                        
-                        <li class="active ">
+                        <li>
                             <a href="employee.jsp">
                                 <i class="nc-icon nc-user-run"></i>
                                 <p>Employee</p>
@@ -181,19 +181,29 @@ Coded by www.creative-tim.com
                                 <div class="col-lg-12">
                                     <div class="card">
                                         <div class="card-header d-flex align-items-center">
-                                            <h3 class="h4">employee</h3>
+                                            <h3 class="h4">delivary</h3>
                                         </div>
                                         <div class="card-body">
                                             <form class="form-horizontal">
                                                 <div class="form-group row">
                                                     <div class="col-sm-9">
-                                                        <input id="emp_id" type="hidden"	value="0" class="form-control form-control-warning">
+                                                        <input id="delivary_id" type="hidden"	value="d0" class="form-control form-control-warning">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
-                                                    <label class="col-sm-3 form-control-label">Full Name</label>
+                                                    <label class="col-sm-3 form-control-label">invoice id</label>
                                                     <div class="col-sm-9">
-                                                        <input id="full_name" type="text"	placeholder="full name" class="form-control form-control-warning">
+                                                        <select id="invoice_id" class="form-control form-control-warning">
+                                                            
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label class="col-sm-3 form-control-label">emp id</label>
+                                                    <div class="col-sm-9">
+                                                        <select id="emp_id" class="form-control form-control-warning">
+                                                            
+                                                        </select>
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
@@ -203,21 +213,15 @@ Coded by www.creative-tim.com
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
-                                                    <label class="col-sm-3 form-control-label">Email</label>
+                                                    <label class="col-sm-3 form-control-label">Customer Contact</label>
                                                     <div class="col-sm-9">
-                                                        <input id="email" type="text"	placeholder="email" class="form-control form-control-warning">
+                                                        <input id="cus_contact" type="text"	placeholder="cus contact" class="form-control form-control-warning">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
-                                                    <label class="col-sm-3 form-control-label">Contact number</label>
+                                                    <label class="col-sm-3 form-control-label">Status</label>
                                                     <div class="col-sm-9">
-                                                        <input id="contact_number" type="text"	placeholder="contact number" class="form-control form-control-warning">
-                                                    </div>
-                                                </div>
-                                                <div class="form-group row">
-                                                    <label class="col-sm-3 form-control-label">Designation</label>
-                                                    <div class="col-sm-9">
-                                                        <input id="designation" type="text"	placeholder="designation" class="form-control form-control-warning">
+                                                        <input id="status" type="text"	placeholder="status" class="form-control form-control-warning">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
@@ -250,12 +254,12 @@ Coded by www.creative-tim.com
                                                     <thead>
                                                         <tr>
                                                             <th>#</th>
+                                                            <th>delivary id</th>
+                                                            <th>invoice id</th>
                                                             <th>emp id</th>
-                                                            <th>full name</th>
                                                             <th>address</th>
-                                                            <th>email</th>
-                                                            <th>contact number</th>
-                                                            <th>designation</th>
+                                                            <th>cus contact</th>
+                                                            <th>status</th>
                                                             <th>date time</th>
                                                         </tr>
                                                     </thead>
@@ -307,7 +311,7 @@ Coded by www.creative-tim.com
         <script src="assets/demo/demo.js"></script>
         <script src="Ajax/jquery.3.2.1.min.js" type="text/javascript"></script>
         <script src="Ajax/ajax.js" type="text/javascript"></script>
-        <script src="Ajax/EmployeeJS.js" type="text/javascript"></script>
+        <script src="Ajax/DelivaryJS.js" type="text/javascript"></script>
 
     </body>
 

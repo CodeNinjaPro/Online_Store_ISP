@@ -45,7 +45,7 @@ Coded by www.creative-tim.com
                         <!-- <p>CT</p> -->
                     </a>
                     <a href="https://www.creative-tim.com" class="simple-text logo-normal">
-                        Creative Team
+                        Gainmart.lk
                         <!-- <div class="logo-image-big">
                           <img src="assets/img/logo-big.png">
                         </div> -->
@@ -58,6 +58,12 @@ Coded by www.creative-tim.com
                             <a href="invoice.jsp">
                                 <i class="nc-icon nc-paper"></i>
                                 <p>Invoice</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="delivery.jsp">
+                                <i class="nc-icon nc-single-02"></i>
+                                <p>Delivery</p>
                             </a>
                         </li>
                         <li>

@@ -129,7 +129,7 @@ function load() {
                 for (i = 0; i < step1.length; ++i) {
                     step2 = step1[i].split("_");
                     var option = document.createElement("option");
-                    option.text = step2[0];
+                    option.text = step2[1];
                     option.value = step2[0];
                     dropdown1.add(option);
 
