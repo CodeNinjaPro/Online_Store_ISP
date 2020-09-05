@@ -54,7 +54,7 @@ Coded by www.creative-tim.com
                 <div class="sidebar-wrapper">
                     <ul class="nav">
 
-                        <li>
+                        <li  class="active ">
                             <a href="invoice.jsp">
                                 <i class="nc-icon nc-paper"></i>
                                 <p>Invoice</p>
@@ -108,7 +108,7 @@ Coded by www.creative-tim.com
                                 <p>Salary</p>
                             </a>
                         </li>                        
-                        <li class="active ">
+                        <li>
                             <a href="user.jsp">
                                 <i class="nc-icon nc-circle-10"></i>
                                 <p>User</p>
@@ -175,43 +175,45 @@ Coded by www.creative-tim.com
                                 <div class="col-lg-12">
                                     <div class="card">
                                         <div class="card-header d-flex align-items-center">
-                                            <h3 class="h4">user</h3>
+                                            <h3 class="h4">invoice</h3>
                                         </div>
                                         <div class="card-body">
                                             <form class="form-horizontal">
                                                 <div class="form-group row">
                                                     <div class="col-sm-9">
-                                                        <input id="user_id" type="hidden"	value="0" class="form-control form-control-warning">
+                                                        <input id="invoice_id" type="hidden"	value="0" class="form-control form-control-warning">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
-                                                    <label class="col-sm-3 form-control-label">emp id</label>
+                                                    <label class="col-sm-3 form-control-label">Customer</label>
                                                     <div class="col-sm-9">
-                                                        <input id="emp_id" type="text"	placeholder="emp id" class="form-control form-control-warning">
+                                                        <select id="customer_id" class="form-control form-control-warning">
+                                                            
+                                                        </select>
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
-                                                    <label class="col-sm-3 form-control-label">user type</label>
+                                                    <label class="col-sm-3 form-control-label">Total</label>
                                                     <div class="col-sm-9">
-                                                        <input id="user_type" type="text"	placeholder="user type" class="form-control form-control-warning">
+                                                        <input id="total" type="number"	placeholder="total" class="form-control form-control-warning">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
-                                                    <label class="col-sm-3 form-control-label">username</label>
+                                                    <label class="col-sm-3 form-control-label">Offer Amount</label>
                                                     <div class="col-sm-9">
-                                                        <input id="username" type="text"	placeholder="username" class="form-control form-control-warning">
+                                                        <input id="offer_amount" type="number"	placeholder="offer amount" class="form-control form-control-warning">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
-                                                    <label class="col-sm-3 form-control-label">password</label>
+                                                    <label class="col-sm-3 form-control-label">Status</label>
                                                     <div class="col-sm-9">
-                                                        <input id="password" type="text"	placeholder="password" class="form-control form-control-warning">
+                                                        <input id="status" type="text"	placeholder="status" class="form-control form-control-warning">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
-                                                    <label class="col-sm-3 form-control-label">date time</label>
+                                                    <label class="col-sm-3 form-control-label">Date</label>
                                                     <div class="col-sm-9">
-                                                        <input id="date_time" type="text"	placeholder="date time" class="form-control form-control-warning">
+                                                        <input id="date_time" type="date"	placeholder="date time" class="form-control form-control-warning">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
@@ -238,11 +240,11 @@ Coded by www.creative-tim.com
                                                     <thead>
                                                         <tr>
                                                             <th>#</th>
-                                                            <th>user id</th>
-                                                            <th>emp id</th>
-                                                            <th>user type</th>
-                                                            <th>username</th>
-                                                            <th>password</th>
+                                                            <th>invoice id</th>
+                                                            <th>customer id</th>
+                                                            <th>total</th>
+                                                            <th>offer amount</th>
+                                                            <th>status</th>
                                                             <th>date time</th>
                                                         </tr>
                                                     </thead>
@@ -252,7 +254,7 @@ Coded by www.creative-tim.com
                                     </div>
                                 </div>
 
-
+                                
                             </div>
                         </div>
                     </section>
@@ -296,7 +298,7 @@ Coded by www.creative-tim.com
         <script src="assets/demo/demo.js"></script>
         <script src="Ajax/jquery.3.2.1.min.js" type="text/javascript"></script>
         <script src="Ajax/ajax.js" type="text/javascript"></script>
-        <script src="Ajax/UserJS.js" type="text/javascript"></script>
+        <script src="Ajax/InvoiceJS.js" type="text/javascript"></script>
 
     </body>
 
