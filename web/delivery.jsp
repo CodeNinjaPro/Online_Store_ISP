@@ -194,7 +194,7 @@ Coded by www.creative-tim.com
                                                     <label class="col-sm-3 form-control-label">invoice id</label>
                                                     <div class="col-sm-9">
                                                         <select id="invoice_id" class="form-control form-control-warning">
-                                                            
+
                                                         </select>
                                                     </div>
                                                 </div>
@@ -202,7 +202,7 @@ Coded by www.creative-tim.com
                                                     <label class="col-sm-3 form-control-label">emp id</label>
                                                     <div class="col-sm-9">
                                                         <select id="emp_id" class="form-control form-control-warning">
-                                                            
+
                                                         </select>
                                                     </div>
                                                 </div>
@@ -234,6 +234,7 @@ Coded by www.creative-tim.com
                                                         <input onclick="save()" type="button" value="Save" class="btn btn-primary">
                                                         <input onclick="update()" type="button" value="Update" class="btn btn-primary">
                                                         <input onclick="delet()" type="button" value="Delete" class="btn btn-primary">
+                                                        <input onclick="Export()" type="button" value="Report" class="btn btn-secondary">
                                                         <input type="reset" value="Reset" class="btn btn-primary">
                                                     </div>
                                                 </div>
@@ -243,7 +244,7 @@ Coded by www.creative-tim.com
                                 </div>
 
                                 <div class="col-lg-12">
-                                    <div class="card">
+                                    <div class="card" id="report">
                                         <div class="card-header d-flex align-items-center">
                                             <h3 class="h4">History</h3>
                                         </div>
@@ -309,6 +310,26 @@ Coded by www.creative-tim.com
         <script src="assets/js/paper-dashboard.min.js?v=2.0.1" type="text/javascript"></script><!-- Paper Dashboard DEMO methods, don't include it in your project! -->
         <script src="assets/demo/demo.js"></script>
         <script src="Ajax/jquery.3.2.1.min.js" type="text/javascript"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.22/pdfmake.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+        <script type="text/javascript">
+                                        function Export() {
+                                            alert("called");
+                                            html2canvas(document.getElementById('report'), {
+                                                onrendered: function (canvas) {
+                                                    var data = canvas.toDataURL();
+                                                    var docDefinition = {
+                                                        content: [{
+
+                                                                image: data,
+                                                                width: 500
+                                                            }]
+                                                    };
+                                                    pdfMake.createPdf(docDefinition).download("Report.pdf");
+                                                }
+                                            });
+                                        }
+        </script>
         <script src="Ajax/ajax.js" type="text/javascript"></script>
         <script src="Ajax/DelivaryJS.js" type="text/javascript"></script>
         <script src="Ajax/Validations.js" type="text/javascript"></script>
