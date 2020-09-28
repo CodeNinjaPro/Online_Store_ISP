@@ -24,6 +24,8 @@ function save() {
     var action = "insert";
     if (customer_id === "" || name === "" || address === "" || contact_no === "" || email === "" || date_time === "") {
         alert("Please Enter All Details")
+    } else if (contactValidation() || ValidateEmail()) {
+
     } else {
         $.ajax({
             url: 'CustomerServlet',
@@ -53,7 +55,9 @@ function update() {
     if (customer_id === 0) {
         alert("Please Select to Update")
     } else if (customer_id === "" || name === "" || address === "" || contact_no === "" || email === "" || date_time === "") {
-        alert("Please Enter All Details")
+        alert("Please Enter All Details");
+    } else if (contactValidation() || ValidateEmail()) {
+
     } else {
         $.ajax({
             url: 'CustomerServlet',
@@ -144,4 +148,29 @@ function load() {
         }
     });
     document.getElementById("form").reset();
+}
+
+//Email validation
+function ValidateEmail() {
+
+    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test($('#email').val()))
+    {
+        return false;
+    }
+    alert("Invalid Email Address");
+    document.getElementById("email").select();
+    return true;
+
+}
+
+//contact number validation
+function contactValidation() {
+    var contactNo = $('#contact_no').val();
+    if (contactNo.length === 10) {
+        return false;
+    } else {
+        alert("Invalid Contact Number");
+        document.getElementById("contact_no").select();
+        return true;
+    }
 }

@@ -36,12 +36,11 @@ public class GrnServlet extends HttpServlet {
 			int supplier_id = Integer.parseInt(request.getParameter("supplier_id"));
 			double total = Double.parseDouble(request.getParameter("total"));
 			String status = request.getParameter("status");
-			String date_time = request.getParameter("date_time");
 			Grn obj = new Grn();
 			obj.setSupplier_id(supplier_id);
 			obj.setTotal(total);
 			obj.setStatus(status);
-			obj.setDate_time(date_time);
+			obj.setDate_time(current_date);
 			try {
 				GrnController.getInstance().Save(obj);
 				response.getWriter().println("Saved!");
@@ -53,13 +52,12 @@ public class GrnServlet extends HttpServlet {
 			int supplier_id = Integer.parseInt(request.getParameter("supplier_id"));
 			double total = Double.parseDouble(request.getParameter("total"));
 			String status = request.getParameter("status");
-			String date_time = request.getParameter("date_time");
 			Grn obj = new Grn();
 			obj.setGrn_id(grn_id);
 			obj.setSupplier_id(supplier_id);
 			obj.setTotal(total);
 			obj.setStatus(status);
-			obj.setDate_time(date_time);
+			obj.setDate_time(current_date);
 			try {
 				GrnController.getInstance().Update(obj);
 				response.getWriter().println("Updated!");

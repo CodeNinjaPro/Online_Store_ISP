@@ -101,6 +101,50 @@ function delet() {
 
 function load() {
     var table = document.getElementById('table');
+    var dropdown1 = document.getElementById('emp_id');
+    $('#emp_id')
+            .find('option')
+            .remove()
+            .end()
+            ;
+
+    var action = "serch";
+    $.ajax({
+        url: 'EmployeeServlet',
+        method: 'POST',
+        data: {action: action},
+        success: function (resultText) {
+
+            resultText = resultText.replace("[", "");
+            resultText = resultText.replace("]", "");
+
+            var c = [];
+            c = resultText;
+
+
+            if (c.length > 1) {
+
+                var step1 = [];
+                var step2 = [];
+                step1 = resultText.split("~");
+
+                for (i = 0; i < step1.length; ++i) {
+                    step2 = step1[i].split("_");
+                    var option = document.createElement("option");
+                    option.text = step2[1];
+                    option.value = step2[0];
+                    dropdown1.add(option);
+
+                }
+            }
+
+            onChangeDiscount();
+
+        },
+        error: function (jqXHR, exception) {
+            swal("fail");
+        }
+    });
     var action = "serch";
     $.ajax({
         url: 'Salary_sheduleServlet',

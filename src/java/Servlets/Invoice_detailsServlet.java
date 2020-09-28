@@ -36,12 +36,11 @@ public class Invoice_detailsServlet extends HttpServlet {
 			int invoice_id = Integer.parseInt(request.getParameter("invoice_id"));
 			int item_registration_id = Integer.parseInt(request.getParameter("item_registration_id"));
 			String qty = request.getParameter("qty");
-			String date_time = request.getParameter("date_time");
 			Invoice_details obj = new Invoice_details();
 			obj.setInvoice_id(invoice_id);
 			obj.setItem_registration_id(item_registration_id);
 			obj.setQty(qty);
-			obj.setDate_time(date_time);
+			obj.setDate_time(current_date);
 			try {
 				Invoice_detailsController.getInstance().Save(obj);
 				response.getWriter().println("Saved!");
@@ -53,13 +52,12 @@ public class Invoice_detailsServlet extends HttpServlet {
 			int invoice_id = Integer.parseInt(request.getParameter("invoice_id"));
 			int item_registration_id = Integer.parseInt(request.getParameter("item_registration_id"));
 			String qty = request.getParameter("qty");
-			String date_time = request.getParameter("date_time");
 			Invoice_details obj = new Invoice_details();
 			obj.setInvoice_details_id(invoice_details_id);
 			obj.setInvoice_id(invoice_id);
 			obj.setItem_registration_id(item_registration_id);
 			obj.setQty(qty);
-			obj.setDate_time(date_time);
+			obj.setDate_time(current_date);
 			try {
 				Invoice_detailsController.getInstance().Update(obj);
 				response.getWriter().println("Updated!");

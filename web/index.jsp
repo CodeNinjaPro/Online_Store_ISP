@@ -8,6 +8,6 @@
 <!DOCTYPE html>
 <html>
     <%
-        response.sendRedirect("user.jsp");
+        response.sendRedirect("site/index.jsp");
     %>
 </html>

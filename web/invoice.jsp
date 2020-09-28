@@ -217,9 +217,8 @@ Coded by www.creative-tim.com
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
-                                                    <label class="col-sm-3 form-control-label">Date</label>
                                                     <div class="col-sm-9">
-                                                        <input id="date_time" type="date"	placeholder="date time" class="form-control form-control-warning">
+                                                        <input id="date_time" type="hidden"	value="2020" class="form-control form-control-warning">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">

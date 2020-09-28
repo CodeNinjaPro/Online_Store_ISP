@@ -191,39 +191,53 @@ Coded by www.creative-tim.com
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
-                                                    <label class="col-sm-3 form-control-label">emp id</label>
+                                                    <label class="col-sm-3 form-control-label">EMP ID</label>
                                                     <div class="col-sm-9">
-                                                        <input id="emp_id" type="text"	placeholder="emp id" class="form-control form-control-warning">
+                                                        <select id="emp_id" class="form-control form-control-warning">
+
+                                                        </select>
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
                                                     <label class="col-sm-3 form-control-label">Month</label>
                                                     <div class="col-sm-9">
-                                                        <input id="month" type="text"	placeholder="month" class="form-control form-control-warning">
+                                                        <select id="month" class="form-control form-control-warning">
+                                                            <option>January</option>
+                                                            <option>February</option>
+                                                            <option>March</option>
+                                                            <option>April</option>
+                                                            <option>May</option>
+                                                            <option>June</option>
+                                                            <option>July</option>
+                                                            <option>August</option>
+                                                            <option>September</option>
+                                                            <option>October</option>
+                                                            <option>November</option>
+                                                            <option>December</option>
+                                                        </select>
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
                                                     <label class="col-sm-3 form-control-label">No of Days</label>
                                                     <div class="col-sm-9">
-                                                        <input id="no_of_days" type="text"	placeholder="no of days" class="form-control form-control-warning">
+                                                        <input id="no_of_days" type="text" onkeypress="validateNumber()" placeholder="no of days" class="form-control form-control-warning">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
                                                     <label class="col-sm-3 form-control-label">Over Time hrs</label>
                                                     <div class="col-sm-9">
-                                                        <input id="no_of_ot" type="text"	placeholder="no of ot" class="form-control form-control-warning">
+                                                        <input id="no_of_ot" type="text" onkeypress="validateNumber()" placeholder="no of ot" class="form-control form-control-warning">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
                                                     <label class="col-sm-3 form-control-label">Advance</label>
                                                     <div class="col-sm-9">
-                                                        <input id="advance" type="text"	placeholder="advance" class="form-control form-control-warning">
+                                                        <input id="advance" type="text" onkeypress="validateNumber()" placeholder="advance" class="form-control form-control-warning">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
-                                                    <label class="col-sm-3 form-control-label">Date</label>
                                                     <div class="col-sm-9">
-                                                        <input id="date_time" type="date"	placeholder="date time" class="form-control form-control-warning">
+                                                        <input id="date_time" type="hidden"	value="2020" class="form-control form-control-warning">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
@@ -308,7 +322,7 @@ Coded by www.creative-tim.com
         <script src="Ajax/jquery.3.2.1.min.js" type="text/javascript"></script>
         <script src="Ajax/ajax.js" type="text/javascript"></script>
         <script src="Ajax/AttendanceJS.js" type="text/javascript"></script>
-
+        <script src="Ajax/Validations.js" type="text/javascript"></script>
     </body>
 
 </html>

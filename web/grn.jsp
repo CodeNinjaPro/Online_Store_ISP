@@ -201,7 +201,7 @@ Coded by www.creative-tim.com
                                                 <div class="form-group row">
                                                     <label class="col-sm-3 form-control-label">Total</label>
                                                     <div class="col-sm-9">
-                                                        <input id="total" type="number"	placeholder="total" class="form-control form-control-warning">
+                                                        <input id="total" type="text" onkeypress="validateNumber()" placeholder="total" class="form-control form-control-warning">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
@@ -211,9 +211,8 @@ Coded by www.creative-tim.com
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
-                                                    <label class="col-sm-3 form-control-label">Date</label>
                                                     <div class="col-sm-9">
-                                                        <input id="date_time" type="date"	placeholder="date time" class="form-control form-control-warning">
+                                                        <input id="date_time" type="hidden"	value="2020" class="form-control form-control-warning">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
@@ -298,6 +297,7 @@ Coded by www.creative-tim.com
         <script src="Ajax/jquery.3.2.1.min.js" type="text/javascript"></script>
         <script src="Ajax/ajax.js" type="text/javascript"></script>
         <script src="Ajax/GrnJS.js" type="text/javascript"></script>
+        <script src="Ajax/Validations.js" type="text/javascript"></script>
 
     </body>
 

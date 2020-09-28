@@ -38,14 +38,13 @@ public class EmployeeServlet extends HttpServlet {
 			String email = request.getParameter("email");
 			String contact_number = request.getParameter("contact_number");
 			String designation = request.getParameter("designation");
-			String date_time = request.getParameter("date_time");
 			Employee obj = new Employee();
 			obj.setFull_name(full_name);
 			obj.setAddress(address);
 			obj.setEmail(email);
 			obj.setContact_number(contact_number);
 			obj.setDesignation(designation);
-			obj.setDate_time(date_time);
+			obj.setDate_time(current_date);
 			try {
 				EmployeeController.getInstance().Save(obj);
 				response.getWriter().println("Saved!");
@@ -59,7 +58,6 @@ public class EmployeeServlet extends HttpServlet {
 			String email = request.getParameter("email");
 			String contact_number = request.getParameter("contact_number");
 			String designation = request.getParameter("designation");
-			String date_time = request.getParameter("date_time");
 			Employee obj = new Employee();
 			obj.setEmp_id(emp_id);
 			obj.setFull_name(full_name);
@@ -67,7 +65,7 @@ public class EmployeeServlet extends HttpServlet {
 			obj.setEmail(email);
 			obj.setContact_number(contact_number);
 			obj.setDesignation(designation);
-			obj.setDate_time(date_time);
+			obj.setDate_time(current_date);
 			try {
 				EmployeeController.getInstance().Update(obj);
 				response.getWriter().println("Updated!");

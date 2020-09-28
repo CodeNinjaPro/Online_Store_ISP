@@ -193,31 +193,32 @@ Coded by www.creative-tim.com
                                                 <div class="form-group row">
                                                     <label class="col-sm-3 form-control-label">emp id</label>
                                                     <div class="col-sm-9">
-                                                        <input id="emp_id" type="text"	placeholder="emp id" class="form-control form-control-warning">
+                                                        <select id="emp_id" class="form-control form-control-warning">
+                                                            
+                                                        </select>                                                        
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
                                                     <label class="col-sm-3 form-control-label">basic salary</label>
                                                     <div class="col-sm-9">
-                                                        <input id="basic_salary" type="text"	placeholder="basic salary" class="form-control form-control-warning">
+                                                        <input id="basic_salary" type="text" onkeypress="validateNumber()" placeholder="basic salary" class="form-control form-control-warning">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
                                                     <label class="col-sm-3 form-control-label">ot rate</label>
                                                     <div class="col-sm-9">
-                                                        <input id="ot_rate" type="text"	placeholder="ot rate" class="form-control form-control-warning">
+                                                        <input id="ot_rate" type="text" onkeypress="validateNumber()"	placeholder="ot rate" class="form-control form-control-warning">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
                                                     <label class="col-sm-3 form-control-label">bonus</label>
                                                     <div class="col-sm-9">
-                                                        <input id="bonus" type="text"	placeholder="bonus" class="form-control form-control-warning">
+                                                        <input id="bonus" type="text" onkeypress="validateNumber()"	placeholder="bonus" class="form-control form-control-warning">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
-                                                    <label class="col-sm-3 form-control-label">date time</label>
                                                     <div class="col-sm-9">
-                                                        <input id="date_time" type="text"	placeholder="date time" class="form-control form-control-warning">
+                                                        <input id="date_time" type="hidden"	value="2020" class="form-control form-control-warning">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
@@ -301,7 +302,7 @@ Coded by www.creative-tim.com
         <script src="Ajax/jquery.3.2.1.min.js" type="text/javascript"></script>
         <script src="Ajax/ajax.js" type="text/javascript"></script>
         <script src="Ajax/Salary_sheduleJS.js" type="text/javascript"></script>
-
+        <script src="Ajax/Validations.js" type="text/javascript"></script>
     </body>
 
 </html>

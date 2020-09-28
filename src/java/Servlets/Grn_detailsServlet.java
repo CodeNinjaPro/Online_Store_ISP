@@ -38,14 +38,13 @@ public class Grn_detailsServlet extends HttpServlet {
 			double qty = Double.parseDouble(request.getParameter("qty"));
 			double unit_price = Double.parseDouble(request.getParameter("unit_price"));
 			String status = request.getParameter("status");
-			String date_time = request.getParameter("date_time");
 			Grn_details obj = new Grn_details();
 			obj.setGrn_id(grn_id);
 			obj.setItem_registration_id(item_registration_id);
 			obj.setQty(qty);
 			obj.setUnit_price(unit_price);
 			obj.setStatus(status);
-			obj.setDate_time(date_time);
+			obj.setDate_time(current_date);
 			try {
 				Grn_detailsController.getInstance().Save(obj);
 				response.getWriter().println("Saved!");
@@ -59,7 +58,6 @@ public class Grn_detailsServlet extends HttpServlet {
 			double qty = Double.parseDouble(request.getParameter("qty"));
 			double unit_price = Double.parseDouble(request.getParameter("unit_price"));
 			String status = request.getParameter("status");
-			String date_time = request.getParameter("date_time");
 			Grn_details obj = new Grn_details();
 			obj.setGrn_details(grn_details);
 			obj.setGrn_id(grn_id);
@@ -67,7 +65,7 @@ public class Grn_detailsServlet extends HttpServlet {
 			obj.setQty(qty);
 			obj.setUnit_price(unit_price);
 			obj.setStatus(status);
-			obj.setDate_time(date_time);
+			obj.setDate_time(current_date);
 			try {
 				Grn_detailsController.getInstance().Update(obj);
 				response.getWriter().println("Updated!");

@@ -211,13 +211,13 @@ Coded by www.creative-tim.com
                                                 <div class="form-group row">
                                                     <label class="col-sm-3 form-control-label">Unit Price</label>
                                                     <div class="col-sm-9">
-                                                        <input id="unit_price" type="text"	placeholder="unit price" class="form-control form-control-warning">
+                                                        <input id="unit_price" type="text" onkeypress="validateNumber()" placeholder="unit price" class="form-control form-control-warning">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
                                                     <label class="col-sm-3 form-control-label">Date</label>
                                                     <div class="col-sm-9">
-                                                        <input id="date_time" type="date"	placeholder="date time" class="form-control form-control-warning">
+                                                        <input id="date_time" type="hidden"	value="2020" class="form-control form-control-warning">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
@@ -244,12 +244,12 @@ Coded by www.creative-tim.com
                                                     <thead>
                                                         <tr>
                                                             <th>#</th>
-                                                            <th>item registration id</th>
-                                                            <th>name</th>
-                                                            <th>category</th>
-                                                            <th>description</th>
-                                                            <th>unit price</th>
-                                                            <th>date time</th>
+                                                            <th>Item Id</th>
+                                                            <th>Name</th>
+                                                            <th>Category</th>
+                                                            <th>Description</th>
+                                                            <th>Unit price</th>
+                                                            <th>Date</th>
                                                         </tr>
                                                     </thead>
                                                 </table>
@@ -302,7 +302,8 @@ Coded by www.creative-tim.com
         <script src="Ajax/jquery.3.2.1.min.js" type="text/javascript"></script>
         <script src="Ajax/ajax.js" type="text/javascript"></script>
         <script src="Ajax/Item_registrationJS.js" type="text/javascript"></script>
-
+        <script src="Ajax/Validations.js" type="text/javascript"></script>
+        
     </body>
 
 </html>

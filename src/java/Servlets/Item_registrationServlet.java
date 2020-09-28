@@ -37,13 +37,12 @@ public class Item_registrationServlet extends HttpServlet {
 			String category = request.getParameter("category");
 			String description = request.getParameter("description");
 			double unit_price = Double.parseDouble(request.getParameter("unit_price"));
-			String date_time = request.getParameter("date_time");
 			Item_registration obj = new Item_registration();
 			obj.setName(name);
 			obj.setCategory(category);
 			obj.setDescription(description);
 			obj.setUnit_price(unit_price);
-			obj.setDate_time(date_time);
+			obj.setDate_time(current_date);
 			try {
 				Item_registrationController.getInstance().Save(obj);
 				response.getWriter().println("Saved!");
@@ -56,14 +55,13 @@ public class Item_registrationServlet extends HttpServlet {
 			String category = request.getParameter("category");
 			String description = request.getParameter("description");
 			double unit_price = Double.parseDouble(request.getParameter("unit_price"));
-			String date_time = request.getParameter("date_time");
 			Item_registration obj = new Item_registration();
 			obj.setItem_registration_id(item_registration_id);
 			obj.setName(name);
 			obj.setCategory(category);
 			obj.setDescription(description);
 			obj.setUnit_price(unit_price);
-			obj.setDate_time(date_time);
+			obj.setDate_time(current_date);
 			try {
 				Item_registrationController.getInstance().Update(obj);
 				response.getWriter().println("Updated!");

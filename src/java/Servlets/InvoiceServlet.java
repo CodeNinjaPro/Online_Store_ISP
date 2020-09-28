@@ -37,13 +37,12 @@ public class InvoiceServlet extends HttpServlet {
 			double total = Double.parseDouble(request.getParameter("total"));
 			double offer_amount = Double.parseDouble(request.getParameter("offer_amount"));
 			String status = request.getParameter("status");
-			String date_time = request.getParameter("date_time");
 			Invoice obj = new Invoice();
 			obj.setCustomer_id(customer_id);
 			obj.setTotal(total);
 			obj.setOffer_amount(offer_amount);
 			obj.setStatus(status);
-			obj.setDate_time(date_time);
+			obj.setDate_time(current_date);
 			try {
 				InvoiceController.getInstance().Save(obj);
 				response.getWriter().println("Saved!");
@@ -56,14 +55,13 @@ public class InvoiceServlet extends HttpServlet {
 			double total = Double.parseDouble(request.getParameter("total"));
 			double offer_amount = Double.parseDouble(request.getParameter("offer_amount"));
 			String status = request.getParameter("status");
-			String date_time = request.getParameter("date_time");
 			Invoice obj = new Invoice();
 			obj.setInvoice_id(invoice_id);
 			obj.setCustomer_id(customer_id);
 			obj.setTotal(total);
 			obj.setOffer_amount(offer_amount);
 			obj.setStatus(status);
-			obj.setDate_time(date_time);
+			obj.setDate_time(current_date);
 			try {
 				InvoiceController.getInstance().Update(obj);
 				response.getWriter().println("Updated!");

@@ -163,8 +163,8 @@ Coded by www.creative-tim.com
                                         </p>
                                     </a>
                                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                                        <a class="dropdown-item" >User</a>
-                                        <a class="dropdown-item" >User Type</a>
+                                        <a class="dropdown-item" >${userfullname}</a>
+                                        <a class="dropdown-item" >${usertype}</a>
                                         <a class="dropdown-item" href="logout.jsp">Logout</a>
                                     </div>
                                 </li>
@@ -193,13 +193,18 @@ Coded by www.creative-tim.com
                                                 <div class="form-group row">
                                                     <label class="col-sm-3 form-control-label">emp id</label>
                                                     <div class="col-sm-9">
-                                                        <input id="emp_id" type="text"	placeholder="emp id" class="form-control form-control-warning">
+                                                        <select id="emp_id" class="form-control form-control-warning">
+                                                            
+                                                        </select>
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
                                                     <label class="col-sm-3 form-control-label">user type</label>
                                                     <div class="col-sm-9">
-                                                        <input id="user_type" type="text"	placeholder="user type" class="form-control form-control-warning">
+                                                        <select id="user_type" class="form-control form-control-warning">
+                                                            <option>Admin</option>
+                                                            <option>Customer</option>
+                                                        </select>
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
@@ -215,9 +220,8 @@ Coded by www.creative-tim.com
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
-                                                    <label class="col-sm-3 form-control-label">date time</label>
                                                     <div class="col-sm-9">
-                                                        <input id="date_time" type="text"	placeholder="date time" class="form-control form-control-warning">
+                                                        <input id="date_time" type="hidden"	value="2020" class="form-control form-control-warning">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">

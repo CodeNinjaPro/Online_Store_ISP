@@ -36,12 +36,11 @@ public class StockServlet extends HttpServlet {
 			int item_registration_id = Integer.parseInt(request.getParameter("item_registration_id"));
 			double qty = Double.parseDouble(request.getParameter("qty"));
 			double offer_presentage = Double.parseDouble(request.getParameter("offer_presentage"));
-			String date_time = request.getParameter("date_time");
 			Stock obj = new Stock();
 			obj.setItem_registration_id(item_registration_id);
 			obj.setQty(qty);
 			obj.setOffer_presentage(offer_presentage);
-			obj.setDate_time(date_time);
+			obj.setDate_time(current_date);
 			try {
 				StockController.getInstance().Save(obj);
 				response.getWriter().println("Saved!");
@@ -53,13 +52,12 @@ public class StockServlet extends HttpServlet {
 			int item_registration_id = Integer.parseInt(request.getParameter("item_registration_id"));
 			double qty = Double.parseDouble(request.getParameter("qty"));
 			double offer_presentage = Double.parseDouble(request.getParameter("offer_presentage"));
-			String date_time = request.getParameter("date_time");
 			Stock obj = new Stock();
 			obj.setStock_id(stock_id);
 			obj.setItem_registration_id(item_registration_id);
 			obj.setQty(qty);
 			obj.setOffer_presentage(offer_presentage);
-			obj.setDate_time(date_time);
+			obj.setDate_time(current_date);
 			try {
 				StockController.getInstance().Update(obj);
 				response.getWriter().println("Updated!");

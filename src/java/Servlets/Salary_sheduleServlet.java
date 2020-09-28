@@ -37,13 +37,12 @@ public class Salary_sheduleServlet extends HttpServlet {
 			double basic_salary = Double.parseDouble(request.getParameter("basic_salary"));
 			double ot_rate = Double.parseDouble(request.getParameter("ot_rate"));
 			double bonus = Double.parseDouble(request.getParameter("bonus"));
-			String date_time = request.getParameter("date_time");
 			Salary_shedule obj = new Salary_shedule();
 			obj.setEmp_id(emp_id);
 			obj.setBasic_salary(basic_salary);
 			obj.setOt_rate(ot_rate);
 			obj.setBonus(bonus);
-			obj.setDate_time(date_time);
+			obj.setDate_time(current_date);
 			try {
 				Salary_sheduleController.getInstance().Save(obj);
 				response.getWriter().println("Saved!");
@@ -56,14 +55,13 @@ public class Salary_sheduleServlet extends HttpServlet {
 			double basic_salary = Double.parseDouble(request.getParameter("basic_salary"));
 			double ot_rate = Double.parseDouble(request.getParameter("ot_rate"));
 			double bonus = Double.parseDouble(request.getParameter("bonus"));
-			String date_time = request.getParameter("date_time");
 			Salary_shedule obj = new Salary_shedule();
 			obj.setSalary_shedule_id(salary_shedule_id);
 			obj.setEmp_id(emp_id);
 			obj.setBasic_salary(basic_salary);
 			obj.setOt_rate(ot_rate);
 			obj.setBonus(bonus);
-			obj.setDate_time(date_time);
+			obj.setDate_time(current_date);
 			try {
 				Salary_sheduleController.getInstance().Update(obj);
 				response.getWriter().println("Updated!");

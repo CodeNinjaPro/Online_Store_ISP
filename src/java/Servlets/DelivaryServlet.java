@@ -38,14 +38,13 @@ public class DelivaryServlet extends HttpServlet {
 			String address = request.getParameter("address");
 			String cus_contact = request.getParameter("cus_contact");
 			String status = request.getParameter("status");
-			String date_time = request.getParameter("date_time");
 			Delivary obj = new Delivary();
 			obj.setInvoice_id(invoice_id);
 			obj.setEmp_id(emp_id);
 			obj.setAddress(address);
 			obj.setCus_contact(cus_contact);
 			obj.setStatus(status);
-			obj.setDate_time(date_time);
+			obj.setDate_time(current_date);
 			try {
 				DelivaryController.getInstance().Save(obj);
 				response.getWriter().println("Saved!");
@@ -59,7 +58,6 @@ public class DelivaryServlet extends HttpServlet {
 			String address = request.getParameter("address");
 			String cus_contact = request.getParameter("cus_contact");
 			String status = request.getParameter("status");
-			String date_time = request.getParameter("date_time");
 			Delivary obj = new Delivary();
 			obj.setDelivary_id(delivary_id);
 			obj.setInvoice_id(invoice_id);
@@ -67,7 +65,7 @@ public class DelivaryServlet extends HttpServlet {
 			obj.setAddress(address);
 			obj.setCus_contact(cus_contact);
 			obj.setStatus(status);
-			obj.setDate_time(date_time);
+			obj.setDate_time(current_date);
 			try {
 				DelivaryController.getInstance().Update(obj);
 				response.getWriter().println("Updated!");
