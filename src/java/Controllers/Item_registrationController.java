@@ -84,4 +84,27 @@ public class Item_registrationController {
         return objList;
     }
 
+    public double getPrice(int itemID) throws Exception {
+        double price = 0;
+        con.getConnection();
+        ResultSet rset = con.srh("SELECT * FROM item_registration WHERE item_registration_id = '" + itemID + "'");
+
+        if (rset.next()) {
+            price = rset.getDouble(5);
+        }
+
+        return price;
+    }
+    
+    public int getLastID() throws Exception {
+        int lastID = 0;
+
+        con.getConnection();
+        ResultSet rset = con.srh("SELECT * FROM item_registration WHERE item_registration_id = (SELECT MAX(item_registration_id) FROM item_registration)");
+        if (rset.next()) {
+            lastID = rset.getInt(1);
+        }
+        return lastID;
+    }
+
 }

@@ -3,7 +3,9 @@ package Servlets;
 
 import Models.Item_registration;
 import Controllers.Item_registrationController;
+import Controllers.StockController;
 import Models.Grn_details_List;
+import Models.Stock;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.text.SimpleDateFormat;
@@ -43,6 +45,12 @@ public class Item_registrationServlet extends HttpServlet {
                 obj.setDate_time(current_date);
                 try {
                     Item_registrationController.getInstance().Save(obj);
+                    Stock sobj = new Stock();
+                    sobj.setItem_registration_id(Item_registrationController.getInstance().getLastID());
+                    sobj.setOffer_presentage(0);
+                    sobj.setQty(0);
+                    sobj.setDate_time(current_date);
+                    StockController.getInstance().Save(sobj);
                     response.getWriter().println("Saved!");
                 } catch (Exception ex) {
                     //error
@@ -103,7 +111,7 @@ public class Item_registrationServlet extends HttpServlet {
                     //Error
                 }
 
-            } 
+            }
 
         }
     }

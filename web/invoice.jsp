@@ -181,6 +181,82 @@ Coded by www.creative-tim.com
                                 <div class="col-lg-12">
                                     <div class="card">
                                         <div class="card-header d-flex align-items-center">
+                                            <h3 class="h4">New Invoice</h3>
+                                        </div>
+                                        <div class="card-body">
+                                            <form class="form-horizontal">
+                                                <div class="form-group row">
+                                                    <div class="col-sm-9">
+                                                        <input id="invoice_details_id" type="hidden"	value="0" class="form-control form-control-warning">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <div class="col-sm-9">
+                                                        <input id="invoice_id_i" type="hidden"	value="0" class="form-control form-control-warning">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label class="col-sm-3 form-control-label">Item</label>
+                                                    <div class="col-sm-9">
+                                                        <input id="item_dump" type="hidden"	value="0" class="form-control form-control-warning">
+                                                        <select id="item_registration_id" class="form-control form-control-warning">
+                                                            
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label class="col-sm-3 form-control-label">Quantity</label>
+                                                    <div class="col-sm-9">
+                                                        <input id="qty" type="text"	placeholder="qty" class="form-control form-control-warning">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <div class="col-sm-9">
+                                                        <input id="date_time_i" type="hidden"	value="2020" class="form-control form-control-warning">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <div class="col-sm-9 offset-sm-3">
+                                                        <input onclick="save_invoice_details()" type="button" value="Add" class="btn btn-primary">
+                                                        <input onclick="delet_invoice_details()" type="button" value="Remove" class="btn btn-danger">
+                                                        <input type="reset" value="Reset" class="btn btn-primary">
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-12">
+                                    <div class="card">
+                                        <div class="card-header d-flex align-items-center">
+                                            <h3 class="h4">History</h3>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="table-responsive">
+                                                <table class="table table-hover" id="cart_table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>#</th>
+                                                            <th>Item ID</th>
+                                                            <th>Quantity</th>
+                                                        </tr>
+                                                    </thead>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="forms">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="card">
+                                        <div class="card-header d-flex align-items-center">
                                             <h3 class="h4">invoice</h3>
                                         </div>
                                         <div class="card-body">
@@ -201,13 +277,13 @@ Coded by www.creative-tim.com
                                                 <div class="form-group row">
                                                     <label class="col-sm-3 form-control-label">Total</label>
                                                     <div class="col-sm-9">
-                                                        <input id="total" type="number"	placeholder="total" class="form-control form-control-warning">
+                                                        <input id="total" type="text" onkeypress="validateNumber()"	placeholder="total" class="form-control form-control-warning">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
                                                     <label class="col-sm-3 form-control-label">Offer Amount</label>
                                                     <div class="col-sm-9">
-                                                        <input id="offer_amount" type="number"	placeholder="offer amount" class="form-control form-control-warning">
+                                                        <input id="offer_amount" type="text" onkeypress="validateNumber()"	placeholder="offer amount" class="form-control form-control-warning">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
@@ -322,6 +398,7 @@ Coded by www.creative-tim.com
                                             });
                                         }
                                         $(document).ready(function () {
+                                            load_invoice_details();
                                             $("#search_table").on("keyup", function () {
                                                 var value = $(this).val().toLowerCase();
                                                 $("#table tr").filter(function () {
@@ -333,6 +410,7 @@ Coded by www.creative-tim.com
         <script src="Ajax/jquery.3.2.1.min.js" type="text/javascript"></script>
         <script src="Ajax/ajax.js" type="text/javascript"></script>
         <script src="Ajax/InvoiceJS.js" type="text/javascript"></script>
+        <script src="Ajax/Invoice_detailsJS.js" type="text/javascript"></script>
 
     </body>
 

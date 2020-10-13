@@ -85,5 +85,9 @@ public class StockController {
         con.getConnection();
         con.aud("update stock set qty = qty + '" + qty + "' WHERE stock_id = '" + id + "'");
     }
+    public void updateStockbyInvoice(int id, double qty) throws Exception {
+        con.getConnection();
+        con.aud("update stock set qty = qty - '" + qty + "' WHERE stock_id = '" + id + "'");
+    }
 
 }

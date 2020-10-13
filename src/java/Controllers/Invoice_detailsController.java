@@ -46,7 +46,7 @@ public class Invoice_detailsController{
 			obj.setInvoice_details_id(rset.getInt(1));
 			obj.setInvoice_id(rset.getInt(2));
 			obj.setItem_registration_id(rset.getInt(3));
-			obj.setQty(rset.getString(4));
+			obj.setQty(rset.getDouble(4));
 			obj.setDate_time(rset.getString(5));
 			objList.add(obj);
 		}
@@ -63,7 +63,7 @@ public class Invoice_detailsController{
 			obj.setInvoice_details_id(rset.getInt(1));
 			obj.setInvoice_id(rset.getInt(2));
 			obj.setItem_registration_id(rset.getInt(3));
-			obj.setQty(rset.getString(4));
+			obj.setQty(rset.getDouble(4));
 			obj.setDate_time(rset.getString(5));
 			objList.add(obj);
 		}
