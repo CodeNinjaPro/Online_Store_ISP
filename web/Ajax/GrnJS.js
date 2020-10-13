@@ -143,6 +143,7 @@ function load() {
             swal("fail");
         }
     });
+    
     var action = "serch";
     $.ajax({
         url: 'GrnServlet',

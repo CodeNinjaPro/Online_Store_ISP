@@ -146,7 +146,7 @@ Coded by www.creative-tim.com
                         <div class="collapse navbar-collapse justify-content-end" id="navigation">
                             <form>
                                 <div class="input-group no-border">
-                                    <input type="text" value="" class="form-control" placeholder="Search...">
+                                    <input type="text" id="search_table" value="" class="form-control" placeholder="Search...">
                                     <div class="input-group-append">
                                         <div class="input-group-text">
                                             <i class="nc-icon nc-zoom-split"></i>
@@ -339,6 +339,14 @@ Coded by www.creative-tim.com
                                                 }
                                             });
                                         }
+                                        $(document).ready(function () {
+                                            $("#search_table").on("keyup", function () {
+                                                var value = $(this).val().toLowerCase();
+                                                $("#table tr").filter(function () {
+                                                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                                                });
+                                            });
+                                        });
         </script>
         <script src="Ajax/jquery.3.2.1.min.js" type="text/javascript"></script>
         <script src="Ajax/ajax.js" type="text/javascript"></script>

@@ -146,7 +146,7 @@ Coded by www.creative-tim.com
                         <div class="collapse navbar-collapse justify-content-end" id="navigation">
                             <form>
                                 <div class="input-group no-border">
-                                    <input type="text" value="" class="form-control" placeholder="Search...">
+                                    <input type="text" id="search_table" value="" class="form-control" placeholder="Search...">
                                     <div class="input-group-append">
                                         <div class="input-group-text">
                                             <i class="nc-icon nc-zoom-split"></i>
@@ -310,7 +310,6 @@ Coded by www.creative-tim.com
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
         <script type="text/javascript">
                                         function Export() {
-                                            alert("called");
                                             html2canvas(document.getElementById('report'), {
                                                 onrendered: function (canvas) {
                                                     var data = canvas.toDataURL();
@@ -325,6 +324,14 @@ Coded by www.creative-tim.com
                                                 }
                                             });
                                         }
+                                        $(document).ready(function () {
+                                            $("#search_table").on("keyup", function () {
+                                                var value = $(this).val().toLowerCase();
+                                                $("#table tr").filter(function () {
+                                                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                                                });
+                                            });
+                                        });
         </script>
         <script src="Ajax/ajax.js" type="text/javascript"></script>
         <script src="Ajax/EmployeeJS.js" type="text/javascript"></script>

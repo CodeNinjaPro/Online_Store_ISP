@@ -146,7 +146,7 @@ Coded by www.creative-tim.com
                         <div class="collapse navbar-collapse justify-content-end" id="navigation">
                             <form>
                                 <div class="input-group no-border">
-                                    <input type="text" value="" class="form-control" placeholder="Search...">
+                                    <input type="text" value="" id="search_table" class="form-control" placeholder="Search...">
                                     <div class="input-group-append">
                                         <div class="input-group-text">
                                             <i class="nc-icon nc-zoom-split"></i>
@@ -194,7 +194,7 @@ Coded by www.creative-tim.com
                                                     <label class="col-sm-3 form-control-label">emp id</label>
                                                     <div class="col-sm-9">
                                                         <select id="emp_id" class="form-control form-control-warning">
-                                                            
+
                                                         </select>
                                                     </div>
                                                 </div>
@@ -324,6 +324,14 @@ Coded by www.creative-tim.com
                                                 }
                                             });
                                         }
+                                        $(document).ready(function () {
+                                            $("#search_table").on("keyup", function () {
+                                                var value = $(this).val().toLowerCase();
+                                                $("#table tr").filter(function () {
+                                                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                                                });
+                                            });
+                                        });
         </script>
         <script src="Ajax/jquery.3.2.1.min.js" type="text/javascript"></script>
         <script src="Ajax/ajax.js" type="text/javascript"></script>
